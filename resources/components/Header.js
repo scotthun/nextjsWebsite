@@ -20,9 +20,9 @@ export default function Header() {
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
             <ul className="menu">
-                <li><Link href="#block1"><a>About</a></Link></li>
-                <li><Link href="#block2"><a>Experience</a></Link></li>
-                <li><Link href="#block3"><a>Contact me</a></Link></li>
+                <li><Link href="#about"><a>About</a></Link></li>
+                <li><Link href="#experience"><a>Experience</a></Link></li>
+                <li><Link href="#contact"><a>Contact</a></Link></li>
             </ul>
 
             <style jsx>
@@ -71,7 +71,8 @@ export default function Header() {
                 }
 
                 .header li a:hover {
-                    background-color: #B5B5B5;
+                    background-color: #fdf731;
+                    color: #212129;
                 }
 
                 .header .menu {

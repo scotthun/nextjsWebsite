@@ -44,9 +44,12 @@ export default class MyForm extends React.Component {
                         text-decoration: none;
                         float: left;
                         display: block;
-                        width: 100%;
+                        width: 60%;
+                        margin-left: 20%;
 
                     }
+
+                
                     .emailInput{
                         background-color: #212129;
                         font-family: 'Montserrat', sans-serif;

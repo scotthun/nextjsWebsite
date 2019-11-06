@@ -15,6 +15,7 @@ export default function Layout(props) {
             <Head>
                 <title>Scott Hung | Software Engineer</title>
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
                 <script src="/functions/scroll.js"></script>
             </Head>
             <Header />
