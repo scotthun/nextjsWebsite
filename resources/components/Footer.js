@@ -4,10 +4,10 @@ export default function Footer() {
     return (
         <div className="footer">
             <ul className="iconList">
-                <li><Link href="https://github.com/scotthun/"><a><img src="/GitHub-Mark-120px-plus.png" /></a></Link></li>
-                <li><Link href="https://www.linkedin.com/in/scotthung/"><a><img src="/book+business+circle+contact+contacts+linkedin+icon-1320073242500496551_128.png" /></a></Link></li>
-                <li><Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a><img src="/icons8-send-email-50.png" /></a></Link></li>
-                <li><Link href="#"><a><img src="/icons8-resume-80.png" /></a></Link></li>
+                <li><Link href="https://github.com/scotthun/"><a><img src="/images/GitHub-Mark-120px-plus.png" /></a></Link></li>
+                <li><Link href="https://www.linkedin.com/in/scotthung/"><a><img src="/images/book+business+circle+contact+contacts+linkedin+icon-1320073242500496551_128.png" /></a></Link></li>
+                <li><Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a><img src="/images/icons8-send-email-50.png" /></a></Link></li>
+                <li><Link href="#"><a><img src="/images/icons8-resume-80.png" /></a></Link></li>
 
 
             </ul>       
@@ -37,8 +37,15 @@ export default function Footer() {
                 }
 
                 .iconList li a img{
-                    height: 20px;
-                    width: 20px;
+                    height: 40px;
+                    width: 40px;
+                    
+                }
+
+                .iconList li a img:hover{
+                    -webkit-transform: scale(1.5);
+                    -ms-transform: scale(1.5);
+                    -transform: scale(1.5);
                     
                 }
 

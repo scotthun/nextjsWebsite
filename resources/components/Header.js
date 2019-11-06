@@ -20,9 +20,9 @@ export default function Header() {
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
             <ul className="menu">
-                <li><Link href="/about"><a>About</a></Link></li>
-                <li><Link href="/experience"><a>Experience</a></Link></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><Link href="#block1"><a>About</a></Link></li>
+                <li><Link href="#block2"><a>Experience</a></Link></li>
+                <li><Link href="#block3"><a>Contact me</a></Link></li>
             </ul>
 
             <style jsx>
@@ -38,6 +38,7 @@ export default function Header() {
                     float: left;
                     margin:0;
                     overflow:hidden;
+            
                 }
 
                 .header ul {

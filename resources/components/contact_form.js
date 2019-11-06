@@ -44,9 +44,7 @@ export default class MyForm extends React.Component {
                         text-decoration: none;
                         float: left;
                         display: block;
-                        width: 50%;
-                        padding-left: 25%;
-                        margin-top: 100px;
+                        width: 100%;
 
                     }
                     .emailInput{
@@ -56,6 +54,10 @@ export default class MyForm extends React.Component {
                         font-size: 12px;
                         color: #ffffff;
                         width: 100%;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: #212129;
+                        
                     }
                     .contactForm label{
                         text-transform: uppercase;
@@ -68,6 +70,7 @@ export default class MyForm extends React.Component {
                         font-weight: 700;
                         font-size: 12px;
                         color: #ffffff;
+                        border: none;
                     }
 
                     .contactForm button{
