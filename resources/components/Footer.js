@@ -37,8 +37,8 @@ export default function Footer() {
                 }
 
                 .iconList li a img{
-                    height: 40px;
-                    width: 40px;
+                    height: 25px;
+                    width: 25px;
                     
                 }
 

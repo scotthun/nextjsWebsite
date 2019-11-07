@@ -13,11 +13,30 @@ export default function Homepage() {
                 <div id="contactContainer">
                     <Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a id="contactBox">Get in touch</a></Link>
                 </div>
+               
 
             </div>
             <div className="block" id="about">
                 <h2>1. About Me</h2>
-                <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself.</p>
+                <img id ="headshot" src="/images/headshot.png" />
+                <div>
+                    <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself. An opportunity to work on software development and data science through an internship with Bank of the West presented itself to me, and I decided to follow my heart and take the leap of faith to become a software engineer.</p>
+                    <p>I am currently studying Computer Science through a distance learning program at Oregon State University and am seeking full-time opportunities. Here is some of the tech I've been using recently:</p>
+                    <div>
+                        <ul id="skillsLeft">
+                            <li>JavaScript (ES6+)</li>
+                            <li>Python 3</li>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>SQL</li>
+                            <li>React</li>
+                            <li>HTML5</li>
+                            <li>CSS</li>
+                            <li>NextJS</li>
+                            <li>NodeJS</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className="block" id="experience">
                 <h2>2. Experience</h2>
@@ -104,6 +123,23 @@ export default function Homepage() {
                         margin-top: 100px;
 
                     }
+                    
+                    #headshot{
+                        display: block;
+                        margin: auto;
+                        height: 287px;
+                        width: 317px;
+
+                    }
+                    #skillsLeft{
+                        columns: 2;
+                        -webkit-columns: 2;
+                        -moz-columns: 2;
+                        margin-right: 30%;
+                        margin-left: 30%;
+                    }
+
+
 
                     #experience{
                         margin-top: 100px;
@@ -115,8 +151,46 @@ export default function Homepage() {
                         padding-bottom: 500px;
 
                     }
+                
+                    @media (min-width: 481px) and (max-width: 768px){
+
+                        #skillsLeft{
+                            columns: 2;
+                            -webkit-columns: 2;
+                            -moz-columns: 2;
+                            margin: auto;
+                        }
+                    }
+
+                    @media (max-width:480px){
+
+                        #nombre{
+                            font-size: 50px;
+                        }
+
+                        #software{
+                            font-size: 50px
+                        }
+
+                        #headshot{
+                        display: block;
+                        margin: auto;
+                        height: 258px;
+                        width: 285px;
+
+                    }
+
+                        #skillsLeft{
+                            columns: 2;
+                            -webkit-columns: 2;
+                            -moz-columns: 2;
+                            margin-right: 10%;
+                            margin-left: 0%;
+                            font-size: 12px;
+                        }
 
 
+                    }
                 `
                 }
 
