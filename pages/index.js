@@ -1,5 +1,6 @@
 import Layout from '../resources/components/MyLayout.js'
 import MyForm from '../resources/components/contact_form.js'
+import getExperience from '../resources/functions/getExperience.js'
 import Link from 'next/link'
 
 export default function Homepage() {
@@ -40,7 +41,99 @@ export default function Homepage() {
             </div>
             <div className="block" id="experience">
                 <h2>2. Experience</h2>
-                <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself.</p>
+                <div>
+                    <ul id="jobSelector">
+                        <li>
+                            <button onClick={() => {
+                                //vanilla JS for now, replace with React way of doing onclick later
+                                var parent = document.getElementById("jobSummary");
+                                parent.innerHTML = "";
+
+                                var jobTitle = document.createElement("p");
+                                jobTitle.innerHTML = "Software Engineer and Data Science Intern @ Bank of the West"
+
+                                var dates = document.createElement("p");
+                                dates.innerHTML = "June 2019 to August 2019"
+
+                                var list = document.createElement("ul");
+
+
+                                var bullets =   ["Worked with designers for rapid iteration of UIs and created UIs with Javascript, React, CSS, Bootstrap, and HTML.",
+                                                "Developed the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.",
+                                                "Created REST APIs with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice as well as wrote reliable, testable, and maintainable code for ML models that will both be used by 400+ developers.",
+                                                "Developed, trained, and tested scalable Python machine learning models that predict KPIs for business users."];
+
+                                for (var i = 0; i < bullets.length; i++) {
+
+                                    var bulletPoint = document.createElement("li");
+                                    bulletPoint.innerHTML = bullets[i];
+
+                                    list.appendChild(bulletPoint);
+
+                                }
+
+                                parent.appendChild(jobTitle);
+                                parent.appendChild(dates);
+                                parent.appendChild(list);
+                               
+                            }}>
+                                Bank of the West
+                             </button></li>
+                        <li><button onClick={() => {
+                            //vanilla JS for now, replace with React way of doing onclick later
+                            var parent = document.getElementById("jobSummary");
+                            parent.innerHTML = "";
+
+                            var jobTitle = document.createElement("p");
+                            jobTitle.innerHTML = "Account Manager @ Oracle";
+
+                            var dates = document.createElement("p");
+                            dates.innerHTML = "December 2017 to June 2019";
+
+                            var listOne = document.createElement("ul");
+
+                            var bulletsOne =   ["Generated $250,000 in revenue and streamlined B2B integration between enterprise software applications and microservices for a Fortune 500 customer by coordinating software engineering and sales resources to develop a cloud solution that automated data transformation and the creation of REST APIs."];
+
+                            for (var i = 0; i < bulletsOne.length; i++) {
+
+                                var bulletPoint = document.createElement("li");
+                                bulletPoint.innerHTML = bulletsOne[i];
+
+                                listOne.appendChild(bulletPoint);
+
+                            }
+
+                            var jobTitleTwo = document.createElement("p");
+                            jobTitleTwo.innerHTML = "Sales Development Representative (promoted after 1.5 years to Account Manager)";
+
+                            var datesTwo = document.createElement("p");
+                            datesTwo.innerHTML = "June 2016 to December 2017";
+
+                            var listTwo = document.createElement("ul");
+
+                            var bulletsTwo = ["Generated over $170,000 in revenue by analyzing internal database with Microsoft Excel and building pivot tables to identify customers with high propensity to buy Oracle products."]
+
+                            for (var i = 0; i < bulletsTwo.length; i++) {
+
+                                var bulletPoint = document.createElement("li");
+                                bulletPoint.innerHTML = bulletsTwo[i];
+
+                                listTwo.appendChild(bulletPoint);
+
+                            }
+
+                            parent.appendChild(jobTitle);
+                            parent.appendChild(dates);
+                            parent.appendChild(listOne);
+
+                            parent.appendChild(jobTitleTwo);
+                            parent.appendChild(datesTwo);
+                            parent.appendChild(listTwo);
+
+                        }}>Oracle</button></li>
+                    </ul>
+                    <div id="jobSummary"></div>
+                </div>
             </div>
             <div className="block" id="contact">
                 <h2>3. How to reach out</h2>
@@ -139,11 +232,46 @@ export default function Homepage() {
                         margin-left: 30%;
                     }
 
-
-
                     #experience{
                         margin-top: 100px;
 
+                    }
+
+                    #jobSelector{
+                        list-style: none; 
+                    }
+
+                    #jobSelector li{
+                        display: inline;
+                    
+                    }
+
+                    #jobSelector li button{
+                        font-size: 14px;
+                        font-family: 'Roboto Mono', monospace;
+                        color: #fdf731;
+                        background-color: transparent;
+                        border: none;
+                    }
+
+                    #jobSelector li button:active{
+                        background-color: #212129;
+                        
+                    }
+                    
+                    #jobSummary{
+                        background-color: #212129;
+                        font-size: 14px;
+                        font-family: 'Roboto Mono', monospace;
+                        color: #fdf731;
+
+                        border: 2px solid #212129;
+                        border-radius: 5px;
+                    }
+                    #jobSummary ul li{
+                        font-size: 14px;
+                        font-family: 'Roboto Mono', monospace;
+                        color: #fdf731;
                     }
 
                     #contact{
