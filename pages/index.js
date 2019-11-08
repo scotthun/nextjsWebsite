@@ -1,6 +1,5 @@
 import Layout from '../resources/components/MyLayout.js'
 import MyForm from '../resources/components/contact_form.js'
-import getExperience from '../resources/functions/getExperience.js'
 import Link from 'next/link'
 
 export default function Homepage() {
@@ -40,9 +39,9 @@ export default function Homepage() {
                 </div>
             </div>
             <div className="block" id="experience">
-                <h2>2. Experience</h2>
+                <h2>2. Work Experience</h2>
                 <div>
-                    <ul id="jobSelector">
+                    <ol id="jobSelector">
                         <li>
                             <button onClick={() => {
                                 //vanilla JS for now, replace with React way of doing onclick later
@@ -131,7 +130,7 @@ export default function Homepage() {
                             parent.appendChild(listTwo);
 
                         }}>Oracle</button></li>
-                    </ul>
+                    </ol>
                     <div id="jobSummary"></div>
                 </div>
             </div>
@@ -238,25 +237,26 @@ export default function Homepage() {
                     }
 
                     #jobSelector{
-                        list-style: none; 
                     }
 
                     #jobSelector li{
-                        display: inline;
+                        
                     
                     }
 
                     #jobSelector li button{
-                        font-size: 14px;
-                        font-family: 'Roboto Mono', monospace;
-                        color: #fdf731;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: #ffffff;
+                        text-decoration: none;
                         background-color: transparent;
                         border: none;
                     }
 
                     #jobSelector li button:active{
                         background-color: #212129;
-                        
+                        color: #fdf731;
                     }
                     
                     #jobSummary{
@@ -265,8 +265,8 @@ export default function Homepage() {
                         font-family: 'Roboto Mono', monospace;
                         color: #fdf731;
 
-                        border: 2px solid #212129;
-                        border-radius: 5px;
+                        border: 20px solid #212129;
+                        border-radius: 10px;
                     }
                     #jobSummary ul li{
                         font-size: 14px;
@@ -316,7 +316,10 @@ export default function Homepage() {
                             margin-left: 0%;
                             font-size: 12px;
                         }
-
+                        
+                        #jobSummary{
+                            font-size: 12px;
+                        }
 
                     }
                 `

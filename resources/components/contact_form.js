@@ -52,10 +52,9 @@ export default class MyForm extends React.Component {
                 
                     .emailInput{
                         background-color: #212129;
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 700;
+                        font-family: 'Roboto Mono', monospace;
+                        color: #fdf731;
                         font-size: 12px;
-                        color: #ffffff;
                         width: 100%;
                         border-style: solid;
                         border-width: 1px;
@@ -69,10 +68,9 @@ export default class MyForm extends React.Component {
                     .contactForm textarea{
                         width: 100%;
                         background-color: #212129;
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 700;
+                        font-family: 'Roboto Mono', monospace;
+                        color: #fdf731;
                         font-size: 12px;
-                        color: #ffffff;
                         border: none;
                     }
 
