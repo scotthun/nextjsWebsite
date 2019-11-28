@@ -18,7 +18,7 @@ export default function Homepage() {
             </div>
             <div className="block" id="about">
                 <h2>1. About Me</h2>
-                <img id ="headshot" src="/images/headshot.png" />
+                <img id ="headshot" src="/images/headshot.PNG" />
                 <div>
                     <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself. An opportunity to work on software development and data science through an internship with Bank of the West presented itself to me, and I decided to follow my heart and take the leap of faith to become a software engineer.</p>
                     <p>I am currently studying Computer Science through a distance learning program at Oregon State University and am seeking full-time opportunities. Here is some of the tech I've been using recently:</p>
