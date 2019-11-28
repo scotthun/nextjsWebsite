@@ -131,7 +131,16 @@ export default function Homepage() {
 
                         }}>Oracle</button></li>
                     </ol>
-                    <div id="jobSummary"></div>
+                    <div id="jobSummary">
+                        <p>Software Engineer and Data Science Intern @ Bank of the West</p>
+                        <p>June 2019 to August 2019</p>
+                        <ul>
+                            <li>Worked with designers for rapid iteration of UIs and created UIs with Javascript, React, CSS, Bootstrap, and HTML.</li>
+                            <li>Developed the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.</li>
+                            <li>Created REST APIs with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice as well as wrote reliable, testable, and maintainable code for ML models that will both be used by 400+ developers.</li>
+                            <li>Developed, trained, and tested scalable Python machine learning models that predict KPIs for business users.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div className="block" id="contact">
