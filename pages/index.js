@@ -42,6 +42,45 @@ export default function Homepage() {
                 <h2>2. Work Experience</h2>
                 <div>
                     <ol id="jobSelector">
+                      <li>
+                            <button onClick={() => {
+                                //vanilla JS for now, replace with React way of doing onclick later
+                                var parent = document.getElementById("jobSummary");
+                                parent.innerHTML = "";
+
+                                var jobTitle = document.createElement("p");
+                                jobTitle.innerHTML = "Software Engineer @ K&C"
+
+                                var dates = document.createElement("p");
+                                dates.innerHTML = "January 2020 to January 2021"
+
+                                var list = document.createElement("ul");
+
+                                var bullets =   [
+                                                  "Increased user productivity by 200%, improved meshing success rate from 50% to 99%, and helped transition application to the beta release by writing Ruby code to integrate a new meshing library with the application.",
+                                                  "Achieved over 90% user adoption rate by proactively presenting new features that I added as well as best practices for the Ruby application to internal teams and users located in the USA and Australia.",
+                                                  "Lead and reported to my firm’s CEO on the research and benchmarking process to identify the new meshing library.",
+                                                  "Constructed graphics pipeline for an OpenGL and C application so that the application could dynamically generate various hexahedral structures.",
+                                                  "Completed beta release of a C++ and Qt application that plots curves for observed material response data and expected material response data by debugging, creating unit tests, refactoring code, and enhancing the GUI.",
+                                                  "Implemented and designed multithreaded architecture to run calculations in the background and to stop GUI freezes."
+                                                ];
+
+                                for (var i = 0; i < bullets.length; i++) {
+
+                                    var bulletPoint = document.createElement("li");
+                                    bulletPoint.innerHTML = bullets[i];
+
+                                    list.appendChild(bulletPoint);
+
+                                }
+
+                                parent.appendChild(jobTitle);
+                                parent.appendChild(dates);
+                                parent.appendChild(list);
+                               
+                            }}>
+                                Karagozian & Case (K&C)
+                             </button></li>
                         <li>
                             <button onClick={() => {
                                 //vanilla JS for now, replace with React way of doing onclick later
@@ -56,11 +95,13 @@ export default function Homepage() {
 
                                 var list = document.createElement("ul");
 
-
-                                var bullets =   ["Worked with designers for rapid iteration of UIs and created UIs with Javascript, React, CSS, Bootstrap, and HTML.",
-                                                "Developed the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.",
-                                                "Created REST APIs with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice as well as wrote reliable, testable, and maintainable code for ML models that will both be used by 400+ developers.",
-                                                "Developed, trained, and tested scalable Python machine learning models that predict KPIs for business users."];
+                                var bullets =   [
+                                                  "Built the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.",
+                                                  "Collaborated with designers for rapid iteration of UIs and created UIs with JavaScript, React, CSS, and Bootstrap.",
+                                                  "Developed, trained, and tested scalable Python machine learning (ML) models that predict KPIs for business users.",
+                                                  "Wrote reliable, testable, and maintainable code for ML models that will be used by 400+ developers.",
+                                                  "Created a REST API with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice"
+                                                ];
 
                                 for (var i = 0; i < bullets.length; i++) {
 
@@ -78,6 +119,7 @@ export default function Homepage() {
                             }}>
                                 Bank of the West
                              </button></li>
+
                         <li><button onClick={() => {
                             //vanilla JS for now, replace with React way of doing onclick later
                             var parent = document.getElementById("jobSummary");
@@ -91,7 +133,7 @@ export default function Homepage() {
 
                             var listOne = document.createElement("ul");
 
-                            var bulletsOne =   ["Generated $250,000 in revenue and streamlined B2B integration between enterprise software applications and microservices for a Fortune 500 customer by coordinating software engineering and sales resources to develop a cloud solution that automated data transformation and the creation of REST APIs."];
+                            var bulletsOne =   ["Generated $250,000 in revenue by coordinating engineering and sales resources to develop a cloud solution for a Fortune 500 customer that streamlined B2B integration between enterprise software applications and microservices."];
 
                             for (var i = 0; i < bulletsOne.length; i++) {
 
@@ -110,7 +152,7 @@ export default function Homepage() {
 
                             var listTwo = document.createElement("ul");
 
-                            var bulletsTwo = ["Generated over $170,000 in revenue by analyzing internal database with Microsoft Excel and building pivot tables to identify customers with high propensity to buy Oracle products."]
+                            var bulletsTwo = ["Generated over $170,000 in revenue by analyzing internal data with Excel, building Excel pivot tables to identify companies most likely to buy Oracle software, and discussing business needs with companies’ senior management."]
 
                             for (var i = 0; i < bulletsTwo.length; i++) {
 
@@ -129,16 +171,19 @@ export default function Homepage() {
                             parent.appendChild(datesTwo);
                             parent.appendChild(listTwo);
 
-                        }}>Oracle</button></li>
+                        }}>Oracle
+                          </button></li>
                     </ol>
                     <div id="jobSummary">
-                        <p>Software Engineer and Data Science Intern @ Bank of the West</p>
-                        <p>June 2019 to August 2019</p>
+                        <p>Software Engineer @ K&C</p>
+                        <p>January 2020 to January 2021</p>
                         <ul>
-                            <li>Worked with designers for rapid iteration of UIs and created UIs with Javascript, React, CSS, Bootstrap, and HTML.</li>
-                            <li>Developed the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.</li>
-                            <li>Created REST APIs with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice as well as wrote reliable, testable, and maintainable code for ML models that will both be used by 400+ developers.</li>
-                            <li>Developed, trained, and tested scalable Python machine learning models that predict KPIs for business users.</li>
+                            <li>Increased user productivity by 200%, improved meshing success rate from 50% to 99%, and helped transition application to the beta release by writing Ruby code to integrate a new meshing library with the application.</li>
+                            <li>Achieved over 90% user adoption rate by proactively presenting new features that I added as well as best practices for the Ruby application to internal teams and users located in the USA and Australia.</li>
+                            <li>Lead and reported to my firm’s CEO on the research and benchmarking process to identify the new meshing library.</li>
+                            <li>Constructed graphics pipeline for an OpenGL and C application so that the application could dynamically generate various hexahedral structures.</li>
+                            <li>Completed beta release of a C++ and Qt application that plots curves for observed material response data and expected material response data by debugging, creating unit tests, refactoring code, and enhancing the GUI.</li>
+                            <li>Implemented and designed multithreaded architecture to run calculations in the background and to stop GUI freezes.</li>
                         </ul>
                     </div>
                 </div>
