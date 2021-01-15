@@ -283,6 +283,7 @@ export default function Homepage() {
                         width: 25%;
 
                     }
+                    
                     #skillsLeft{
                         columns: 2;
                         -webkit-columns: 2;
@@ -347,6 +348,13 @@ export default function Homepage() {
                             -moz-columns: 2;
                             margin: auto;
                         }
+
+                        #headshot{
+                          display: block;
+                          margin: auto;
+                          height: 90%;
+                          width: 99%;
+                        }
                     }
 
                     @media (max-width:480px){
@@ -360,12 +368,11 @@ export default function Homepage() {
                         }
 
                         #headshot{
-                        display: block;
-                        margin: auto;
-                        height: 258px;
-                        width: 285px;
-
-                    }
+                          display: block;
+                          margin: auto;
+                          height: 90%;
+                          width: 99%;
+                        }
 
                         #skillsLeft{
                             columns: 2;
