@@ -312,11 +312,11 @@ export default function Homepage() {
                     }
                     
                     #jobSummary{
-                        background-color: #d0a800;
+                        background-color: #d3d3d3;
                         color: #333333;
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
-                        border: 20px solid #d0a800;
+                        border: 20px solid #d3d3d3;
                         border-radius: 10px;
                     }
                     #jobSummary ul li{
