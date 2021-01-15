@@ -40,7 +40,7 @@ export default class MyForm extends React.Component {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 700;
                         font-size: 16px;
-                        color: #ffffff;
+                        color: #333333;
                         text-decoration: none;
                         float: left;
                         display: block;
@@ -51,14 +51,14 @@ export default class MyForm extends React.Component {
 
                 
                     .emailInput{
-                        background-color: #212129;
+                        background-color: #778899;
                         font-family: 'Roboto Mono', monospace;
                         color: #fdf731;
                         font-size: 12px;
                         width: 100%;
                         border-style: solid;
                         border-width: 1px;
-                        border-color: #212129;
+                        border-color: #778899;
                         
                     }
                     .contactForm label{
@@ -67,7 +67,7 @@ export default class MyForm extends React.Component {
 
                     .contactForm textarea{
                         width: 100%;
-                        background-color: #212129;
+                        background-color: #778899;
                         font-family: 'Roboto Mono', monospace;
                         color: #fdf731;
                         font-size: 12px;
@@ -79,10 +79,23 @@ export default class MyForm extends React.Component {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 700;
                         font-size: 16px;
-                        background-color: #212129;
-                        border: none;
+                        background-color: #778899;
+                        border: 2px solid #fdf731;
                         text-transform: uppercase;
-                        color: #ffffff;
+                        color: #fdf731;
+                    }
+
+                    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                      color: #fdf731;
+                      opacity: 1; /* Firefox */
+                    }
+                    
+                    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                      color: #fdf731;
+                    }
+                    
+                    ::-ms-input-placeholder { /* Microsoft Edge */
+                      color: #fdf731;
                     }
 
                 `}

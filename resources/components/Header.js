@@ -29,7 +29,7 @@ export default function Header() {
             {`
 
                 nav.header {
-                    background-color: #212129;
+                    background-color: #23395d;
                     opacity: 1.00;
                     position: fixed;
                     width: 100%;

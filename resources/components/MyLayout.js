@@ -38,11 +38,11 @@ export default function Layout(props) {
                 }
                 body{
                     margin:0;      
-                    background-color: #3137FD;
+                    background-color: #ffffff;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 700;
                     font-size: 16px;
-                    color: #ffffff;
+                    color: #333333;
                     text-decoration: none;
                 }
 
