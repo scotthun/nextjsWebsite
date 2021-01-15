@@ -7,7 +7,7 @@ export default function Footer() {
                 <li><Link href="https://github.com/scotthun/"><a><img src="/images/GitHub-Mark-120px-plus.png" /></a></Link></li>
                 <li><Link href="https://www.linkedin.com/in/scotthung/"><a><img src="/images/book+business+circle+contact+contacts+linkedin+icon-1320073242500496551_128.png" /></a></Link></li>
                 <li><Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a><img src="/images/icons8-send-email-50.png" /></a></Link></li>
-                <li><Link href="https://github.com/scotthun/nextjsWebsite/blob/master/public/files/scott_hung_resume.pdf"><a><img src="/images/icons8-resume-80.png" /></a></Link></li>
+                <li><Link href="https://github.com/scotthun/nextjsWebsite/raw/master/public/files/scott_hung_resume.pdf"><a><img src="/images/icons8-resume-80.png" /></a></Link></li>
 
 
             </ul>       

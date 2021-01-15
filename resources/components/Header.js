@@ -192,54 +192,7 @@ export default function Header() {
 
 
         </nav>
-       
 
-/*
-    <div id="navbar">
-      
-        
-        <Link href="/about"><a style={linkStyle}>About</a></Link>
-        <Link href="/"><a style={linkStyle}>Home</a></Link>
-
-        
-        <style jsx>
-        {`
-
-          #navbar {
-            background-color: #212129;
-            padding: 0;
-            border:0;
-            margin:0;
-            overflow: hidden;
-            height: 50px;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            position: fixed;
-            width: 100%;
-          }
-
-          #navbar a{
-           font-family: 'Montserrat', sans-serif;
-           font-weight: 700;
-           font-size: 20px;
-           color: white;
-           text-decoration: none;
-           float: right;
-           text-align: center;
-           text-transform: uppercase;
-           height: 30px;
-           padding-top:12px;
-           padding-bottom:8px;
-           margin-right: 15px
-          }
-
-
-        `}
-        </style>
-    </div>
-    */
     )
-
 
 }
