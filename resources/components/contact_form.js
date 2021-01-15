@@ -51,14 +51,15 @@ export default class MyForm extends React.Component {
 
                 
                     .emailInput{
-                        background-color: #778899;
+                        background-color: #d0a800;
+                        color: #333333;
                         font-family: 'Roboto Mono', monospace;
                         color: #fdf731;
                         font-size: 12px;
                         width: 100%;
                         border-style: solid;
                         border-width: 1px;
-                        border-color: #778899;
+                        border-color: #d0a800;
                         
                     }
                     .contactForm label{
@@ -67,9 +68,9 @@ export default class MyForm extends React.Component {
 
                     .contactForm textarea{
                         width: 100%;
-                        background-color: #778899;
+                        background-color: #d0a800;
+                        color: #333333;
                         font-family: 'Roboto Mono', monospace;
-                        color: #fdf731;
                         font-size: 12px;
                         border: none;
                     }
@@ -79,23 +80,23 @@ export default class MyForm extends React.Component {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 700;
                         font-size: 16px;
-                        background-color: #778899;
-                        border: 2px solid #fdf731;
+                        background-color: #d0a800;
+                        color: #333333;
+                        border: none;
                         text-transform: uppercase;
-                        color: #fdf731;
                     }
 
                     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                      color: #fdf731;
+                      color: #333333;
                       opacity: 1; /* Firefox */
                     }
                     
                     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                      color: #fdf731;
+                      color: #333333;
                     }
                     
                     ::-ms-input-placeholder { /* Microsoft Edge */
-                      color: #fdf731;
+                      color: #333333;
                     }
 
                 `}
