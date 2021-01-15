@@ -71,8 +71,8 @@ export default function Header() {
                 }
 
                 .header li a:hover {
-                    background-color: #fdf731;
-                    color: #212129;
+                    background-color: #d0a800;
+                    color: #333333;
                 }
 
                 .header .menu {

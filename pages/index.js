@@ -233,14 +233,13 @@ export default function Homepage() {
 
                     #contactBox{
                         font-family: 'Roboto Mono', monospace;
-                        color: #fdf731;
+                        background-color: #d0a800;
+                        color: #333333;
                         font-size: 14px;
                         text-decoration: none;
-                        border: 2px solid #fdf731;
+                        border: 2px solid #d0a800;
                         padding: 14px;
-                        border-radius: 5px;
-                        background-color: #778899;
-                        
+                        border-radius: 5px;                        
                     }
 
                     .block{
@@ -308,23 +307,22 @@ export default function Homepage() {
                     }
 
                     #jobSelector li button:active{
-                        background-color: #212129;
-                        color: #fdf731;
+                        background-color: #d0a800;
+                        color: #333333;
                     }
                     
                     #jobSummary{
-                        background-color: #778899;
+                        background-color: #d0a800;
+                        color: #333333;
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
-                        color: #fdf731;
-
-                        border: 20px solid #778899;
+                        border: 20px solid #d0a800;
                         border-radius: 10px;
                     }
                     #jobSummary ul li{
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
-                        color: #fdf731;
+                        color: #333333;
                     }
 
                     #contact{
