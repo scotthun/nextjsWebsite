@@ -193,6 +193,14 @@ export default function Homepage() {
                 <p>Feel free to connect with me on LinkedIn or send me an email by clicking on the respective icon at the bottom. Or, you can even send me a messge by filling out the form below. Whether for a potential project or just to say hi, I'll try my best to get back to you!</p>
                 <MyForm />
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <style jsx>
                 {
                     `
@@ -271,8 +279,8 @@ export default function Homepage() {
                     #headshot{
                         display: block;
                         margin: auto;
-                        height: 287px;
-                        width: 317px;
+                        height: 28%;
+                        width: 25%;
 
                     }
                     #skillsLeft{
