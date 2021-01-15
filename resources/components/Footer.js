@@ -21,7 +21,7 @@ export default function Footer() {
                     bottom: 0;
                     width: 100%;
                     background-color: transparent;
-                    color: white;
+                    color: #333333;
                     text-align: center;
                 }
                 

@@ -203,7 +203,6 @@ export default function Homepage() {
                     }
 
                     #hello{
-                        color: #fdf731;
                         margin-bottom: 0px;
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
@@ -240,13 +239,13 @@ export default function Homepage() {
                         border: 2px solid #fdf731;
                         padding: 14px;
                         border-radius: 5px;
-                        background-color: #212129;
+                        background-color: #778899;
                         
                     }
 
                     .block{
-                        margin-left: 10%;
-                        width:80%;
+                        margin-left: 25%;
+                        width:50%;
                         padding-top: 50px;
                     }
 
@@ -254,7 +253,7 @@ export default function Homepage() {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 700;
                         font-size: 32px;
-                        color: #ffffff;
+                        color: #333333;
                         text-decoration: none;
                         text-transform: uppercase;
                         width: 100%;
@@ -302,7 +301,7 @@ export default function Homepage() {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 700;
                         font-size: 16px;
-                        color: #ffffff;
+                        color: #333333;
                         text-decoration: none;
                         background-color: transparent;
                         border: none;
@@ -314,12 +313,12 @@ export default function Homepage() {
                     }
                     
                     #jobSummary{
-                        background-color: #212129;
+                        background-color: #778899;
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
                         color: #fdf731;
 
-                        border: 20px solid #212129;
+                        border: 20px solid #778899;
                         border-radius: 10px;
                     }
                     #jobSummary ul li{
