@@ -2,12 +2,6 @@ import Header from './Header'
 import Head from 'next/head'
 import Footer from './Footer';
 
-/*
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-}*/
-
 export default function Layout(props) {
     return (
 
@@ -16,10 +10,10 @@ export default function Layout(props) {
                 <title>Scott Hung | Software Engineer</title>
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
-                <script src="/functions/scroll.js"></script>
             </Head>
             <Header />
             {props.children}
+            
             <Footer />
             <style jsx>
             {`
@@ -35,6 +29,7 @@ export default function Layout(props) {
             {`
                 html {
                     scroll-behavior: smooth;
+                    height: 100%;
                 }
                 body{
                     margin:0;      
@@ -44,6 +39,8 @@ export default function Layout(props) {
                     font-size: 16px;
                     color: #333333;
                     text-decoration: none;
+                    height: 100%;
+                    width: 100%;
                 }
 
             `}

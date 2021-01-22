@@ -1,24 +1,12 @@
 import Link from 'next/link'
-/*
-const linkStyle = {
-  marginRight: 15
-}
-
-
-const headerStyle = {
-
-    border: '1px solid #DDD',
-    background-color: lightblue
-
-}
-*/
 
 export default function Header() {
     return (
 
-        <nav className="header">
+        <div className="header">
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
+            <h1 id="left-name" height="100%">SCOTT HUNG</h1>
             <ul className="menu">
                 <li><Link href="#about"><a>About</a></Link></li>
                 <li><Link href="#experience"><a>Experience</a></Link></li>
@@ -28,13 +16,26 @@ export default function Header() {
             <style jsx>
             {`
 
-                nav.header {
+                #left-name {
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding: .1em;
+                  margin-left: .75em;
+                  text-decoration: none;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 700;
+                  font-size: 28px;
+                  color: #ffffff;
+                  text-transform: uppercase; 
+                }
+
+                div.header {
                     background-color: #23395d;
                     opacity: 1.00;
                     position: fixed;
                     width: 100%;
                     top:0;
-                    z-index:10;
+                    z-index:0;
                     float: left;
                     margin:0;
                     overflow:hidden;
@@ -46,33 +47,32 @@ export default function Header() {
 	                position: relative; 
 	                float: left; 
 	                display: block; 
-	                left: 50%;
+	                float: right;
 	                max-width: 1200px;
-	                margin: 0;
-	                padding: 0;
+                  margin: 0;
+                  padding: .5em;
                 }
 
                 .header ul li {
 	                position: relative; 
-	                right: 50%;
+                  right: 0%;
+                  
                 }
 
                 .header li a {
                     display: block;
-                    padding: 1em;
                     text-decoration: none;
-                    color: #212129;
                     text-align: right;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 700;
                     font-size: 16px;
                     color: #ffffff;
                     text-transform: uppercase;  
+                    vertical-align:middle;
                 }
 
                 .header li a:hover {
-                    background-color: #d0a800;
-                    color: #333333;
+                    text-decoration: underline;
                 }
 
                 .header .menu {
@@ -141,7 +141,8 @@ export default function Header() {
                 }
 
                 @media only screen and (min-width: 750px) {
-
+                    
+                  
                     .header li {
 	                    float: left;
                     }
@@ -163,9 +164,9 @@ export default function Header() {
 
                 @media only screen and (max-width: 750px) {
                     .header li a {
-	
-	                    background-color: #212129;
-	                    opacity: 0.9;
+                      margin-top: 1em;
+                      margin-bottom: 1em;
+                      margin-right: 1em;
                     }
 
                     .header ul li {
@@ -177,21 +178,43 @@ export default function Header() {
 
                     .header ul {
 	                    width: 100%;
-	
+                      padding: 0em;
+                      background-color: #333333;
+                    }
+
+                    #left-name {
+                      padding: 0em;
                     }
                 }
 
                 @media only screen and (max-width: 480px) {
-                    nav.header {
+                  .header li a {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    margin-right: 1em;
+                  }
 
-                    }
+                  .header ul li {
+                    color: #000;
+                  }
+
+                  .header ul li:first-child {
+                  }
+
+                  .header ul {
+                    width: 100%;
+                    padding: 0em;
+                    background-color: #333333;
+                  }
+                  #left-name {
+                    padding: 0em;
+                  }
                 }
 
             `}
             </style>
 
-
-        </nav>
+        </div>
 
     )
 
