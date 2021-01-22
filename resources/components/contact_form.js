@@ -19,9 +19,16 @@ export default class MyForm extends React.Component {
                 method="POST"
             >
                 
-                <label>Your Email Address:</label>
+                <label>Name:</label>
+                <input className="emailInput" type="text" name="senderName" placeholder="John Smith"/>
                 <br />
+                <br />
+                <label>Email Address:</label>
                 <input className="emailInput" type="email" name="email" placeholder="john.smith@example.com"/>
+                <br />
+                <br />
+                <label>Subject:</label>
+                <input className="emailInput" type="text" name="subject" placeholder="Hi Scott"/>
                 <br />
                 <br />
                 <label>Message:</label>
@@ -40,8 +47,8 @@ export default class MyForm extends React.Component {
                         text-decoration: none;
                         float: left;
                         display: block;
-                        width: 60%;
-                        margin-left: 20%;
+                        width: 40%;
+                        margin-left: 30%;
 
                     }
 
@@ -79,19 +86,34 @@ export default class MyForm extends React.Component {
                         color: #333333;
                         border: none;
                         text-transform: uppercase;
+                        float: right;
                     }
 
                     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                      color: #333333;
-                      opacity: 1; /* Firefox */
+                        color: #333333;
+                        opacity: 1; /* Firefox */
                     }
                     
                     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                      color: #333333;
+                        color: #333333;
                     }
                     
                     ::-ms-input-placeholder { /* Microsoft Edge */
                       color: #333333;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                        .contactForm{
+                            width:100%;
+                            margin-left: 0%;
+                        }
+                    }
+  
+                    @media only screen and (max-width: 480px) {
+                        .contactForm{
+                            width:100%;
+                            margin-left: 0%;
+                        }
                     }
 
                 `}
