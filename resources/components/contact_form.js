@@ -48,7 +48,7 @@ export default class MyForm extends React.Component {
                         float: left;
                         display: block;
                         width: 40%;
-                        margin-left: 25%;
+                        margin-left: 30%;
 
                     }
 
