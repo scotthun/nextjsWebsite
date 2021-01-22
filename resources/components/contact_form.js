@@ -90,16 +90,30 @@ export default class MyForm extends React.Component {
                     }
 
                     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                      color: #333333;
-                      opacity: 1; /* Firefox */
+                        color: #333333;
+                        opacity: 1; /* Firefox */
                     }
                     
                     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                      color: #333333;
+                        color: #333333;
                     }
                     
                     ::-ms-input-placeholder { /* Microsoft Edge */
                       color: #333333;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                        .contactForm{
+                            width:100%;
+                            margin-left: 0%;
+                        }
+                    }
+  
+                    @media only screen and (max-width: 480px) {
+                        .contactForm{
+                            width:100%;
+                            margin-left: 0%;
+                        }
                     }
 
                 `}
