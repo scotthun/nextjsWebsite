@@ -20,6 +20,7 @@ export default function Header() {
                   display: inline-block;
                   vertical-align: middle;
                   padding: .1em;
+                  margin-left: .75em;
                   text-decoration: none;
                   font-family: 'Montserrat', sans-serif;
                   font-weight: 700;
@@ -212,8 +213,6 @@ export default function Header() {
 
             `}
             </style>
-
-
         </div>
 
     )
