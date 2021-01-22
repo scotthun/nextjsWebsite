@@ -6,7 +6,7 @@ export default function Header() {
         <div className="header">
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
-            <h1 id="left-name" height="100%">SCOTT HUNG</h1>
+            <Link href="/"><a><h1 id="left-name" height="100%">SCOTT HUNG</h1></a></Link>
             <ul className="menu">
                 <li><Link href="#about"><a>About</a></Link></li>
                 <li><Link href="#experience"><a>Experience</a></Link></li>
@@ -27,6 +27,10 @@ export default function Header() {
                   font-size: 28px;
                   color: #ffffff;
                   text-transform: uppercase; 
+                }
+
+                #left-name:hover {
+                  text-decoration: underline;
                 }
 
                 div.header {

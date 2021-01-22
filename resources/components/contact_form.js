@@ -28,7 +28,7 @@ export default class MyForm extends React.Component {
                 <br />
                 <br />
                 <label>Subject:</label>
-                <input className="emailInput" type="text" name="subject" placeholder="Hi Scott"/>
+                <input className="emailInput" type="text" name="subject" placeholder="Hi Scott!"/>
                 <br />
                 <br />
                 <label>Message:</label>
