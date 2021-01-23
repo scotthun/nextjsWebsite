@@ -3,6 +3,7 @@ import MyForm from '../resources/components/contact_form.js'
 import ExperienceTable from '../resources/components/ExperienceTable.js'
 import {experienceEntries} from '../resources/functions/experience.js'
 import * as textGenerator from '../resources/functions/intro.js' 
+import ExperienceDiv from '../resources/components/ExperienceDiv.js'
 
 export default function Homepage() {
     return (
@@ -21,8 +22,11 @@ export default function Homepage() {
                               <h3 className="hello"> Hi my name is</h3>
                               <h1 className="nombre">Scott Hung.</h1>
                               <h1 className="software">I love to write code.</h1>
+                              <p style={{lineHeight:'2em'}}>
                               {textGenerator.getIntroText()}
+                              <br/>
                               {textGenerator.getSummaryText()}
+                              </p>
                             </p>
                             </div>
                         </div>
@@ -51,9 +55,13 @@ export default function Homepage() {
               </div>
             </div>
             <div className="block" >
-              <div className="innerBlock">
+              <div className="innerBlock" id="desktopExperience">
                 <h2>1. Work Experience</h2>
-                <ExperienceTable />
+                <ExperienceTable/>
+              </div>
+              <div className="innerBlock" id="mobileExperience">
+                <h2>1. Work Experience</h2>
+                <ExperienceDiv />
               </div>
             </div>
             <div className="block" id="experience">
@@ -351,6 +359,10 @@ export default function Homepage() {
 
                     }
 
+                    #mobileExperience{
+                      display:none;
+                    }
+
                     #jobSelector{
                     }
 
@@ -431,6 +443,14 @@ export default function Homepage() {
                           width: 100%;
                         }
 
+                        #desktopExperience{
+                          display:none;
+                        }
+
+                        #mobileExperience{
+                          display:block;
+                        }
+
                         
                     }
 
@@ -477,6 +497,14 @@ export default function Homepage() {
                         
                         #jobSummary{
                             font-size: 12px;
+                        }
+
+                        #desktopExperience{
+                          display:none;
+                        }
+
+                        #mobileExperience{
+                          display:block;
                         }
 
                     }

@@ -24,7 +24,7 @@ export default class ExperienceTable extends React.Component {
         return (
           <tr key={jobTitle}>
               <td>
-                <img className="experienceTablePicture" src={imagePath} style={{width: '100%', display: 'inline-block', padding: '0', float: 'left', height:'15em'}}/>
+                <img className="experienceTablePicture" src={imagePath} style={{width: '60%', display: 'inline-block', padding: '0', float: 'left', height:'30%', marginLeft:'20%'}}/>
               </td>
               <td style={{width: '5%'}}></td>
               <td className="pictureLeft" style={{height:'25em'}}>
@@ -35,7 +35,7 @@ export default class ExperienceTable extends React.Component {
                   {dates}
                 </p>
                 <ul>
-                  {bullets.map( bullet => <li>{bullet}</li>)}
+                  {bullets.map( bullet => <li style={{margin:'1em 0', lineHeight:'2em'}}>{bullet}</li>)}
                 </ul>
               </td>
           </tr>
@@ -52,12 +52,12 @@ export default class ExperienceTable extends React.Component {
                   {dates}
                 </p>
                 <ul>
-                  {bullets.map( bullet => <li>{bullet}</li>)}
+                  {bullets.map( bullet => <li style={{margin:'1em 0', lineHeight:'2em'}}>{bullet}<br /></li>)}
                 </ul>
               </td>
               <td style={{width: '5%'}}></td>
               <td>
-                <img className="experienceTablePicture" src={imagePath} style={{width: '100%', display: 'inline-block', padding: '0', float: 'right', height: '15em'}}/>
+                <img className="experienceTablePicture" src={imagePath} style={{width: '60%', display: 'inline-block', padding: '0', float: 'right', height: '30%', marginRight:'20%'}}/>
               </td>
           </tr>
         )
