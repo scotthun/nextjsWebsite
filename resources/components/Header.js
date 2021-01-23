@@ -8,7 +8,7 @@ export default function Header() {
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
             <Link href="/"><a><h1 id="left-name" height="100%">SCOTT HUNG</h1></a></Link>
             <ul className="menu">
-                <li><Link href="#about"><a>About</a></Link></li>
+                <li><Link href="/"><a>Home</a></Link></li>
                 <li><Link href="#experience"><a>Experience</a></Link></li>
                 <li><Link href="#contact"><a>Contact</a></Link></li>
             </ul>
