@@ -6,9 +6,9 @@ export default function Header() {
         <div className="header">
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn"><span className="navicon"></span></label>
-            <h1 id="left-name" height="100%">SCOTT HUNG</h1>
+            <Link href="/"><a><h1 id="left-name" height="100%">SCOTT HUNG</h1></a></Link>
             <ul className="menu">
-                <li><Link href="#about"><a>About</a></Link></li>
+                <li><Link href="/"><a>Home</a></Link></li>
                 <li><Link href="#experience"><a>Experience</a></Link></li>
                 <li><Link href="#contact"><a>Contact</a></Link></li>
             </ul>
@@ -29,6 +29,10 @@ export default function Header() {
                   text-transform: uppercase; 
                 }
 
+                #left-name:hover {
+                  text-decoration: underline;
+                }
+
                 div.header {
                     background-color: #23395d;
                     opacity: 1.00;
@@ -39,7 +43,7 @@ export default function Header() {
                     float: left;
                     margin:0;
                     overflow:hidden;
-            
+                    z-index: 100;
                 }
 
                 .header ul {

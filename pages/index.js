@@ -1,197 +1,76 @@
 import Layout from '../resources/components/MyLayout.js'
 import MyForm from '../resources/components/contact_form.js'
-import Link from 'next/link'
+import ExperienceTable from '../resources/components/ExperienceTable.js'
+import {experienceEntries} from '../resources/functions/experience.js'
+import * as textGenerator from '../resources/functions/intro.js' 
+import ExperienceDiv from '../resources/components/ExperienceDiv.js'
 
 export default function Homepage() {
     return (
         <Layout>
-            <div className="block" id= "intro">
-                <h3 id="hello"> Hi my name is</h3>
-                <h1 id="nombre">Scott Hung.</h1>
-                <h1 id="software">I love to write code.</h1>
-                <p id="summary">I'm a software engineer based out of California and specialize in building awesome, high-quality websites and applications.</p>
-                <div id="contactContainer">
-                    <Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a id="contactBox">Get in touch</a></Link>
+            {
+              //block for desktop
+            }
+            <div className="block" id= "introDesktop">
+              <div className="innerBlock">
+                <table className="introTable" >
+                <tr>
+                    <td>
+                        <div className="tdDiv">
+                            <div className="descriptionText">
+                            <p>
+                              <h3 className="hello"> Hi my name is</h3>
+                              <h1 className="nombre">Scott Hung.</h1>
+                              <h1 className="software">I love to write code.</h1>
+                              <p style={{lineHeight:'2em'}}>
+                              {textGenerator.getIntroText()}
+                              <br/>
+                              {textGenerator.getSummaryText()}
+                              </p>
+                            </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                      <img className="tablePicture" src="/images/headshot.PNG" />
+                    </td>
+                </tr>
+                </table>
                 </div>
                
-
+                <p className="clear">&nbsp;</p>
             </div>
-            <div className="block" id="about">
-                <h2>1. About Me</h2>
-                <img id ="headshot" src="/images/headshot.PNG" />
-                <div>
-                    <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself. An opportunity to work on software development and data science through an internship with Bank of the West presented itself to me, and I decided to follow my heart and take the leap of faith to become a software engineer.</p>
-                    <p>I am currently studying Computer Science through a distance learning program at Oregon State University and am seeking full-time opportunities. Here is some of the tech I've been using recently:</p>
-                    <div>
-                        <ul id="skillsLeft">
-                            <li>JavaScript (ES6+)</li>
-                            <li>Python 3</li>
-                            <li>C++</li>
-                            <li>C</li>
-                            <li>SQL</li>
-                            <li>React</li>
-                            <li>HTML5</li>
-                            <li>CSS</li>
-                            <li>NextJS</li>
-                            <li>NodeJS</li>
-                        </ul>
-                    </div>
-                </div>
+
+            {
+              //block for mobile
+            }
+            <div className="block" id= "introMobile">
+              <div className="innerBlock">
+                <h3 className="hello"> Hi my name is</h3>
+                <h1 className="nombre">Scott Hung.</h1>
+                <h1 className="software">I love to write code.</h1>
+                <img id="mobileHeadshot" src="/images/headshot.PNG" />
+                {textGenerator.getIntroText()}
+                {textGenerator.getSummaryText()}
+              </div>
             </div>
             <div className="block" id="experience">
-                <h2>2. Work Experience</h2>
-                <div>
-                    <ol id="jobSelector">
-                      <li>
-                            <button onClick={() => {
-                                //vanilla JS for now, replace with React way of doing onclick later
-                                var parent = document.getElementById("jobSummary");
-                                parent.innerHTML = "";
-
-                                var jobTitle = document.createElement("p");
-                                jobTitle.innerHTML = "Software Engineer @ K&C"
-
-                                var dates = document.createElement("p");
-                                dates.innerHTML = "January 2020 to January 2021"
-
-                                var list = document.createElement("ul");
-
-                                var bullets =   [
-                                                  "Increased user productivity by 200%, improved meshing success rate from 50% to 99%, and helped transition application to the beta release by writing Ruby code to integrate a new meshing library with the application.",
-                                                  "Achieved over 90% user adoption rate by proactively presenting new features that I added as well as best practices for the Ruby application to internal teams and users located in the USA and Australia.",
-                                                  "Lead and reported to my firm’s CEO on the research and benchmarking process to identify the new meshing library.",
-                                                  "Constructed graphics pipeline for an OpenGL and C application so that the application could dynamically generate various hexahedral structures.",
-                                                  "Completed beta release of a C++ and Qt application that plots curves for observed material response data and expected material response data by debugging, creating unit tests, refactoring code, and enhancing the GUI.",
-                                                  "Implemented and designed multithreaded architecture to run calculations in the background and to stop GUI freezes."
-                                                ];
-
-                                for (var i = 0; i < bullets.length; i++) {
-
-                                    var bulletPoint = document.createElement("li");
-                                    bulletPoint.innerHTML = bullets[i];
-
-                                    list.appendChild(bulletPoint);
-
-                                }
-
-                                parent.appendChild(jobTitle);
-                                parent.appendChild(dates);
-                                parent.appendChild(list);
-                               
-                            }}>
-                                Karagozian & Case (K&C)
-                             </button></li>
-                        <li>
-                            <button onClick={() => {
-                                //vanilla JS for now, replace with React way of doing onclick later
-                                var parent = document.getElementById("jobSummary");
-                                parent.innerHTML = "";
-
-                                var jobTitle = document.createElement("p");
-                                jobTitle.innerHTML = "Software Engineer and Data Science Intern @ Bank of the West"
-
-                                var dates = document.createElement("p");
-                                dates.innerHTML = "June 2019 to August 2019"
-
-                                var list = document.createElement("ul");
-
-                                var bullets =   [
-                                                  "Built the backend with Python and Flask of an app that allows the user to enter data and then receive a prediction with 90% confidence for how many years someone will work at a company.",
-                                                  "Collaborated with designers for rapid iteration of UIs and created UIs with JavaScript, React, CSS, and Bootstrap.",
-                                                  "Developed, trained, and tested scalable Python machine learning (ML) models that predict KPIs for business users.",
-                                                  "Wrote reliable, testable, and maintainable code for ML models that will be used by 400+ developers.",
-                                                  "Created a REST API with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice"
-                                                ];
-
-                                for (var i = 0; i < bullets.length; i++) {
-
-                                    var bulletPoint = document.createElement("li");
-                                    bulletPoint.innerHTML = bullets[i];
-
-                                    list.appendChild(bulletPoint);
-
-                                }
-
-                                parent.appendChild(jobTitle);
-                                parent.appendChild(dates);
-                                parent.appendChild(list);
-                               
-                            }}>
-                                Bank of the West
-                             </button></li>
-
-                        <li><button onClick={() => {
-                            //vanilla JS for now, replace with React way of doing onclick later
-                            var parent = document.getElementById("jobSummary");
-                            parent.innerHTML = "";
-
-                            var jobTitle = document.createElement("p");
-                            jobTitle.innerHTML = "Account Manager @ Oracle";
-
-                            var dates = document.createElement("p");
-                            dates.innerHTML = "December 2017 to June 2019";
-
-                            var listOne = document.createElement("ul");
-
-                            var bulletsOne =   ["Generated $250,000 in revenue by coordinating engineering and sales resources to develop a cloud solution for a Fortune 500 customer that streamlined B2B integration between enterprise software applications and microservices."];
-
-                            for (var i = 0; i < bulletsOne.length; i++) {
-
-                                var bulletPoint = document.createElement("li");
-                                bulletPoint.innerHTML = bulletsOne[i];
-
-                                listOne.appendChild(bulletPoint);
-
-                            }
-
-                            var jobTitleTwo = document.createElement("p");
-                            jobTitleTwo.innerHTML = "Sales Development Representative (promoted after 1.5 years to Account Manager)";
-
-                            var datesTwo = document.createElement("p");
-                            datesTwo.innerHTML = "June 2016 to December 2017";
-
-                            var listTwo = document.createElement("ul");
-
-                            var bulletsTwo = ["Generated over $170,000 in revenue by analyzing internal data with Excel, building Excel pivot tables to identify companies most likely to buy Oracle software, and discussing business needs with companies’ senior management."]
-
-                            for (var i = 0; i < bulletsTwo.length; i++) {
-
-                                var bulletPoint = document.createElement("li");
-                                bulletPoint.innerHTML = bulletsTwo[i];
-
-                                listTwo.appendChild(bulletPoint);
-
-                            }
-
-                            parent.appendChild(jobTitle);
-                            parent.appendChild(dates);
-                            parent.appendChild(listOne);
-
-                            parent.appendChild(jobTitleTwo);
-                            parent.appendChild(datesTwo);
-                            parent.appendChild(listTwo);
-
-                        }}>Oracle
-                          </button></li>
-                    </ol>
-                    <div id="jobSummary">
-                        <p>Software Engineer @ K&C</p>
-                        <p>January 2020 to January 2021</p>
-                        <ul>
-                            <li>Increased user productivity by 200%, improved meshing success rate from 50% to 99%, and helped transition application to the beta release by writing Ruby code to integrate a new meshing library with the application.</li>
-                            <li>Achieved over 90% user adoption rate by proactively presenting new features that I added as well as best practices for the Ruby application to internal teams and users located in the USA and Australia.</li>
-                            <li>Lead and reported to my firm’s CEO on the research and benchmarking process to identify the new meshing library.</li>
-                            <li>Constructed graphics pipeline for an OpenGL and C application so that the application could dynamically generate various hexahedral structures.</li>
-                            <li>Completed beta release of a C++ and Qt application that plots curves for observed material response data and expected material response data by debugging, creating unit tests, refactoring code, and enhancing the GUI.</li>
-                            <li>Implemented and designed multithreaded architecture to run calculations in the background and to stop GUI freezes.</li>
-                        </ul>
-                    </div>
-                </div>
+              <div className="innerBlock" id="desktopExperience">
+                <h2>1. Work Experience</h2>
+                <ExperienceTable />
+              </div>
+              <div className="innerBlock" id="mobileExperience">
+                <h2>1. Work Experience</h2>
+                <ExperienceDiv />
+              </div>
             </div>
+            
             <div className="block" id="contact">
-                <h2>3. How to reach out</h2>
+              <div className="innerBlock">
+                <h2>2. How to reach out</h2>
                 <p>Feel free to connect with me on LinkedIn or send me an email by clicking on the respective icon at the bottom. Or, you can even send me a messge by filling out the form below. Whether for a potential project or just to say hi, I'll try my best to get back to you!</p>
                 <MyForm />
+              </div>
             </div>
             <br />
             <br />
@@ -205,25 +84,54 @@ export default function Homepage() {
                 {
                     `
                 
-                    #intro{
-                       
+                    #introDesktop{
+                        background-color: #ffffff;
                         margin-top: 50px;
+                        margin-bottom: 50px;
+                    }
+                    
+                    .introTable{
+                      width: 100%;
                     }
 
-                    #hello{
+                    .tablePicture {
+                      float:right;
+                      width: 25em;
+                      display: inline-block;
+                      padding: 0;
+                      vertical-align: middle;
+                    }
+
+                    .tdDiv
+                    {
+                      position:relative;
+                      top:0px;
+                    }
+
+                    .clear{
+                        clear: both;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+
+                    #lastParagraph{
+                        margin: 0;
+                    }
+
+                    .hello{
                         margin-bottom: 0px;
                         font-size: 14px;
                         font-family: 'Roboto Mono', monospace;
                     }
                     
-                    #nombre{
+                    .nombre{
                         font-size: 70px;
                         margin-top: 0px;
                         padding-top: 0px;
                         margin-bottom: 0px;
                     }
                     
-                    #software{
+                    .software{
                         font-size: 70px;
                         margin-top: 0px;
                         padding-top: 0px;
@@ -246,14 +154,17 @@ export default function Homepage() {
                         font-size: 14px;
                         text-decoration: none;
                         border: 2px solid #d0a800;
-                        padding: 14px;
                         border-radius: 5px;                        
                     }
 
                     .block{
-                        margin-left: 25%;
-                        width:50%;
+                        width:100%;
                         padding-top: 50px;
+                        background-color: #f0f0f0;
+                    }
+                    .innerBlock{
+                        width:80%;
+                        margin-left: 10%;
                     }
 
                     .block h2{
@@ -264,6 +175,7 @@ export default function Homepage() {
                         text-decoration: none;
                         text-transform: uppercase;
                         width: 100%;
+                        margin-top: 0px;
 
                     }
 
@@ -272,15 +184,15 @@ export default function Homepage() {
                     }
 
                     #about{
-                        margin-top: 100px;
-
+                      background-color: #ffffff;
                     }
                     
                     #headshot{
-                        display: block;
                         margin: auto;
-                        height: 28%;
-                        width: 25%;
+                        height: 20%;
+                        width: 18%;
+                        float: right;
+                        display: inline;
 
                     }
                     
@@ -293,8 +205,11 @@ export default function Homepage() {
                     }
 
                     #experience{
-                        margin-top: 100px;
+                      padding-top: 100px;
+                    }
 
+                    #mobileExperience{
+                      display:none;
                     }
 
                     #jobSelector{
@@ -335,12 +250,17 @@ export default function Homepage() {
                     }
 
                     #contact{
-                        margin-top: 100px;
-                        padding-bottom: 500px;
+                        padding-top: 100px;
+                        padding-bottom: 700px;
+                        background-color: #ffffff;
 
                     }
+
+                    #introMobile{
+                      display: none;
+                    }
                 
-                    @media (min-width: 481px) and (max-width: 768px){
+                    @media (min-width: 481px) and (max-width: 751px){
 
                         #skillsLeft{
                             columns: 2;
@@ -355,9 +275,55 @@ export default function Homepage() {
                           height: 90%;
                           width: 99%;
                         }
+
+                        #introMobile{
+                          background-color: #ffffff;
+                          margin-top: 50px;
+                          margin-bottom: 50px;
+                          display: block;
+                        }
+
+                        #mobileHeadshot{
+                          width: 100%;
+                          margin-bottom: 1em;
+                        }
+
+                        #introDesktop{
+                          display: none;
+                          width: 100%;
+                        }
+
+                        #experience{
+                          padding-bottom: 50px;
+                        }
+
+                        #desktopExperience{
+                          display:none;
+                        }
+
+                        #mobileExperience{
+                          display:block;
+                        }
+
+                        
                     }
 
                     @media (max-width:480px){
+
+                        #introMobile{
+                          background-color: #ffffff;
+                          margin-top: 50px;
+                          margin-bottom: 50px;
+                          display: block;
+                        }
+
+                        #mobileHeadshot{
+                          width: 100%;
+                        }
+
+                        #introDesktop{
+                          display: none;
+                        }
 
                         #nombre{
                             font-size: 50px;
@@ -385,6 +351,18 @@ export default function Homepage() {
                         
                         #jobSummary{
                             font-size: 12px;
+                        }
+
+                        #desktopExperience{
+                          display:none;
+                        }
+
+                        #mobileExperience{
+                          display:block;
+                        }
+
+                        #experience{
+                          padding-bottom: 50px;
                         }
 
                     }

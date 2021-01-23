@@ -28,7 +28,7 @@ export default class MyForm extends React.Component {
                 <br />
                 <br />
                 <label>Subject:</label>
-                <input className="emailInput" type="text" name="subject" placeholder="Hi Scott"/>
+                <input className="emailInput" type="text" name="subject" placeholder="Hi Scott!"/>
                 <br />
                 <br />
                 <label>Message:</label>
@@ -57,7 +57,7 @@ export default class MyForm extends React.Component {
                         background-color: #f0f0f0;
                         color: #333333;
                         font-family: 'Roboto Mono', monospace;
-                        font-size: 12px;
+                        font-size: 16px;
                         width: 100%;
                         border-style: solid;
                         border-width: 1px;
@@ -73,7 +73,7 @@ export default class MyForm extends React.Component {
                         background-color: #f0f0f0;
                         color: #333333;
                         font-family: 'Roboto Mono', monospace;
-                        font-size: 12px;
+                        font-size: 16px;
                         border: none;
                     }
 
