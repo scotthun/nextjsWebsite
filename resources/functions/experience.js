@@ -1,8 +1,9 @@
 class ExperienceEntry {
-  constructor(jobTitle,dates,bullets) {
-      this.jobTitle = jobTitle;
-      this.dates = dates;
-      this.bullets = bullets;
+  constructor(imagePath,jobTitle,dates,bullets) {
+    this.imagePath = imagePath;  
+    this.jobTitle = jobTitle;
+    this.dates = dates;
+    this.bullets = bullets;
   }
 
   getJobTitle(){
@@ -21,6 +22,7 @@ class ExperienceEntry {
 
 var experienceEntries = [];
 
+var imageOne = "/images/kc.jpg";
 var titleOne = "Software Engineer @ K&C";
 var datesOne = "January 2020 to January 2021";
 var bulletsOne =   [
@@ -32,10 +34,10 @@ var bulletsOne =   [
   "Implemented and designed multithreaded architecture to run calculations in the background and to stop GUI freezes."
 ];
 
-var entryOne = new ExperienceEntry(titleOne, datesOne, bulletsOne);
+var entryOne = new ExperienceEntry(imageOne, titleOne, datesOne, bulletsOne);
 experienceEntries.push(entryOne);
 
-
+var imageTwo = "/images/botw.jpg";
 var titleTwo = "Software Engineer and Data Science Intern @ Bank of the West";
 var datesTwo = "June 2019 to August 2019";
 var bulletsTwo =   [
@@ -46,25 +48,27 @@ var bulletsTwo =   [
   "Created a REST API with Flask and Python (NumPy, SciPy, Pandas, and scikit-learn) for a data science microservice"
 ];
 
-var entryTwo = new ExperienceEntry(titleTwo, datesTwo, bulletsTwo);
+var entryTwo = new ExperienceEntry(imageTwo, titleTwo, datesTwo, bulletsTwo);
 experienceEntries.push(entryTwo);
 
+var imageThree = "/images/oracle.jpg"
 var titleThree = "Account Manager @ Oracle";
 var datesThree = "December 2017 to June 2019";
 var bulletsThree =   [
   "Generated $250,000 in revenue by coordinating engineering and sales resources to develop a cloud solution for a Fortune 500 customer that streamlined B2B integration between enterprise software applications and microservices."
 ];
 
-var entryThree = new ExperienceEntry(titleThree, datesThree, bulletsThree);
+var entryThree = new ExperienceEntry(imageThree, titleThree, datesThree, bulletsThree);
 experienceEntries.push(entryThree);
 
+var imageFour = "/images/oracle.jpg"
 var titleFour = "Sales Development Representative @ Oracle (promoted after 1.5 years to Account Manager)";
 var datesFour = "June 2016 to December 2017";
 var bulletsFour =   [
   "Generated over $170,000 in revenue by analyzing internal data with Excel, building Excel pivot tables to identify companies most likely to buy Oracle software, and discussing business needs with companies’ senior management."
 ];
 
-var entryFour = new ExperienceEntry(titleFour, datesFour, bulletsFour);
+var entryFour = new ExperienceEntry(imageFour, titleFour, datesFour, bulletsFour);
 experienceEntries.push(entryFour);
 
 export { experienceEntries };

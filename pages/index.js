@@ -53,7 +53,7 @@ export default function Homepage() {
             <div className="block" >
               <div className="innerBlock">
                 <h2>1. Work Experience</h2>
-                <ExperienceTable/>
+                <ExperienceTable />
               </div>
             </div>
             <div className="block" id="experience">
@@ -234,7 +234,7 @@ export default function Homepage() {
                     }
                     
                     .introTable{
-                      width: 80%;
+                      width: 100%;
                     }
 
                     .tablePicture {

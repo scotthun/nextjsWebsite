@@ -5,40 +5,29 @@ export default class ExperienceTable extends React.Component {
   constructor(props) {
       super(props);
       this.generateEntries = this.generateEntries.bind(this);
-      this.state = {
-          isLeft: true
-      };
+      
   }
 
   render() {
-      const { status } = this.state;
       return (
           <table id="experienceTable">
             {this.generateEntries()}
-            
-              <style jsx>
-              {`
-                 .experienceTablePicture{
-                   float: right;
-                 }
-
-              `}
-              </style>
           </table>
       );
   }
 
   generateEntries(){
     return experienceEntries.map((entry, index) => {
-      const { jobTitle, dates, bullets } = entry
+      const { imagePath, jobTitle, dates, bullets } = entry
       if(index % 2 == 0)
       {
         return (
           <tr key={jobTitle}>
               <td>
-                <img className="experienceTablePicture" src="/images/headshot.PNG" style={{width: '25em', display: 'inline-block', padding: '0', float: 'left'}}/>
+                <img className="experienceTablePicture" src={imagePath} style={{width: '100%', display: 'inline-block', padding: '0', float: 'left', height:'15em'}}/>
               </td>
-              <td className="pictureLeft">
+              <td style={{width: '5%'}}></td>
+              <td className="pictureLeft" style={{height:'25em'}}>
                 <p>
                   {jobTitle}
                 </p>
@@ -55,7 +44,7 @@ export default class ExperienceTable extends React.Component {
       else{
         return (
           <tr key={jobTitle}>
-              <td className="pictureRight">
+              <td className="pictureRight"  style={{height:'25em'}}>
                 <p>
                   {jobTitle}
                 </p>
@@ -66,8 +55,9 @@ export default class ExperienceTable extends React.Component {
                   {bullets.map( bullet => <li>{bullet}</li>)}
                 </ul>
               </td>
+              <td style={{width: '5%'}}></td>
               <td>
-                <img className="experienceTablePicture" src="/images/headshot.PNG" style={{width: '25em', display: 'inline-block', padding: '0', float: 'right'}}/>
+                <img className="experienceTablePicture" src={imagePath} style={{width: '100%', display: 'inline-block', padding: '0', float: 'right', height: '15em'}}/>
               </td>
           </tr>
         )
