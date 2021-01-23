@@ -43,7 +43,7 @@ export default function Header() {
                     float: left;
                     margin:0;
                     overflow:hidden;
-            
+                    z-index: 100;
                 }
 
                 .header ul {

@@ -1,44 +1,43 @@
 import Layout from '../resources/components/MyLayout.js'
 import MyForm from '../resources/components/contact_form.js'
-import Link from 'next/link'
+import * as textGenerator from '../resources/components/text/intro.js' 
 
 export default function Homepage() {
     return (
         <Layout>
+            {
+              //block for desktop
+            }
             <div className="block" id= "intro">
-                <h3 id="hello"> Hi my name is</h3>
-                <h1 id="nombre">Scott Hung.</h1>
-                <h1 id="software">I love to write code.</h1>
-                <p id="summary">I'm a software engineer based out of California and specialize in building awesome, high-quality websites and applications.</p>
-                <div id="contactContainer">
-                    <Link href="mailto:scott_hung@aol.com?subject=Hey Scott, just wanted to reach out!"><a id="contactBox">Get in touch</a></Link>
+              <div className="innerBlock">
+                <table class="firstTable" >
+                <tr>
+                    <td>
+                        
+                        <div id="bio">
+                            <div className="descriptionText">
+                            <p>
+                              <h3 id="hello"> Hi my name is</h3>
+                              <h1 id="nombre">Scott Hung.</h1>
+                              <h1 id="software">I love to write code.</h1>
+                              {textGenerator.getIntroText()}
+                              {textGenerator.getSummaryText()}
+                            </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                      <img className="TextWrap" src="/images/headshot.PNG" />
+                    </td>
+                </tr>
+                </table>
                 </div>
                
-
+                <p class="clear">&nbsp;</p>
             </div>
-            <div className="block" id="about">
-                <h2>1. About Me</h2>
-                <img id ="headshot" src="/images/headshot.PNG" />
-                <div>
-                    <p>In a previous life, I studied History and Business at university, and I worked in business development and sales for several years at Oracle. After my first job in tech, I realized my passion for the industry truly stems from the tech itself. An opportunity to work on software development and data science through an internship with Bank of the West presented itself to me, and I decided to follow my heart and take the leap of faith to become a software engineer.</p>
-                    <p>I am currently studying Computer Science through a distance learning program at Oregon State University and am seeking full-time opportunities. Here is some of the tech I've been using recently:</p>
-                    <div>
-                        <ul id="skillsLeft">
-                            <li>JavaScript (ES6+)</li>
-                            <li>Python 3</li>
-                            <li>C++</li>
-                            <li>C</li>
-                            <li>SQL</li>
-                            <li>React</li>
-                            <li>HTML5</li>
-                            <li>CSS</li>
-                            <li>NextJS</li>
-                            <li>NodeJS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
             <div className="block" id="experience">
+              <div className="innerBlock">
                 <h2>2. Work Experience</h2>
                 <div>
                     <ol id="jobSelector">
@@ -187,11 +186,14 @@ export default function Homepage() {
                         </ul>
                     </div>
                 </div>
+              </div>
             </div>
             <div className="block" id="contact">
+              <div className="innerBlock">
                 <h2>3. How to reach out</h2>
                 <p>Feel free to connect with me on LinkedIn or send me an email by clicking on the respective icon at the bottom. Or, you can even send me a messge by filling out the form below. Whether for a potential project or just to say hi, I'll try my best to get back to you!</p>
                 <MyForm />
+              </div>
             </div>
             <br />
             <br />
@@ -206,8 +208,38 @@ export default function Homepage() {
                     `
                 
                     #intro{
-                       
+                        background-color: #ffffff;
                         margin-top: 50px;
+                        margin-bottom: 50px;
+                    }
+                    td {
+                      font-size: 16px;
+                    }
+                    
+                    .firstTable{
+                      width: 80%;
+                    }
+
+                    .TextWrap {
+                      float:right;
+                      width: 25em;
+                      display: inline-block;
+                      padding: 0;
+                      vertical-align: middle;
+                    }
+                  #bio
+                  {
+                    position:relative;
+                    top:0px;
+                  }
+                    .clear{
+                        clear: both;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+
+                    #lastParagraph{
+                        margin: 0;
                     }
 
                     #hello{
@@ -246,14 +278,17 @@ export default function Homepage() {
                         font-size: 14px;
                         text-decoration: none;
                         border: 2px solid #d0a800;
-                        padding: 14px;
                         border-radius: 5px;                        
                     }
 
                     .block{
-                        margin-left: 25%;
-                        width:50%;
+                        width:100%;
                         padding-top: 50px;
+                        background-color: #f0f0f0;
+                    }
+                    .innerBlock{
+                        width:80%;
+                        margin-left: 10%;
                     }
 
                     .block h2{
@@ -264,6 +299,7 @@ export default function Homepage() {
                         text-decoration: none;
                         text-transform: uppercase;
                         width: 100%;
+                        margin-top: 0px;
 
                     }
 
@@ -272,15 +308,15 @@ export default function Homepage() {
                     }
 
                     #about{
-                        margin-top: 100px;
-
+                      background-color: #ffffff;
                     }
                     
                     #headshot{
-                        display: block;
                         margin: auto;
-                        height: 28%;
-                        width: 25%;
+                        height: 20%;
+                        width: 18%;
+                        float: right;
+                        display: inline;
 
                     }
                     
@@ -293,7 +329,6 @@ export default function Homepage() {
                     }
 
                     #experience{
-                        margin-top: 100px;
 
                     }
 
@@ -335,8 +370,8 @@ export default function Homepage() {
                     }
 
                     #contact{
-                        margin-top: 100px;
                         padding-bottom: 500px;
+                        background-color: #ffffff;
 
                     }
                 
