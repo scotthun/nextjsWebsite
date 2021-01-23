@@ -1,5 +1,7 @@
 import Layout from '../resources/components/MyLayout.js'
 import MyForm from '../resources/components/contact_form.js'
+import ExperienceTable from '../resources/components/ExperienceTable.js'
+import {experienceEntries} from '../resources/functions/experience.js'
 import * as textGenerator from '../resources/functions/intro.js' 
 
 export default function Homepage() {
@@ -10,10 +12,9 @@ export default function Homepage() {
             }
             <div className="block" id= "introDesktop">
               <div className="innerBlock">
-                <table class="introTable" >
+                <table className="introTable" >
                 <tr>
                     <td>
-                        
                         <div className="tdDiv">
                             <div className="descriptionText">
                             <p>
@@ -33,9 +34,12 @@ export default function Homepage() {
                 </table>
                 </div>
                
-                <p class="clear">&nbsp;</p>
+                <p className="clear">&nbsp;</p>
             </div>
 
+            {
+              //block for mobile
+            }
             <div className="block" id= "introMobile">
               <div className="innerBlock">
                 <h3 className="hello"> Hi my name is</h3>
@@ -44,6 +48,12 @@ export default function Homepage() {
                 <img id="mobileHeadshot" src="/images/headshot.PNG" />
                 {textGenerator.getIntroText()}
                 {textGenerator.getSummaryText()}
+              </div>
+            </div>
+            <div className="block" >
+              <div className="innerBlock">
+                <h2>1. Work Experience</h2>
+                <ExperienceTable/>
               </div>
             </div>
             <div className="block" id="experience">
@@ -200,7 +210,7 @@ export default function Homepage() {
             </div>
             <div className="block" id="contact">
               <div className="innerBlock">
-                <h2>3. How to reach out</h2>
+                <h2>2. How to reach out</h2>
                 <p>Feel free to connect with me on LinkedIn or send me an email by clicking on the respective icon at the bottom. Or, you can even send me a messge by filling out the form below. Whether for a potential project or just to say hi, I'll try my best to get back to you!</p>
                 <MyForm />
               </div>
