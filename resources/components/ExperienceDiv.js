@@ -21,10 +21,10 @@ export default class ExperienceDiv extends React.Component {
       const { imagePath, jobTitle, dates, bullets } = entry
         return (
           <div style={{width:'100%'}}>
-            <h3>{jobTitle}</h3>
-            <img className="experienceDivPicture" src={imagePath} style={{width: '100%', display: 'inline-block', padding: '0', float: 'right', height: '12em'}}/>
+            <h2 style={{textAlign: 'center'}}>{jobTitle}</h2>
+            <img className="experienceDivPicture" src={imagePath} style={{width: '60%', display: 'block', padding: '0', height: '30%', marginLeft:'20%'}}/>
             <ul>
-                  {bullets.map( bullet => <li>{bullet}</li>)}
+                  {bullets.map( bullet => <li style={{margin:'1em 0', lineHeight:'2em'}}>{bullet}</li>)}
                 </ul>
           </div>
         )
