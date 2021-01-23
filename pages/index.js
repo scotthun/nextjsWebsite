@@ -250,7 +250,8 @@ export default function Homepage() {
                     }
 
                     #contact{
-                        padding-bottom: 500px;
+                        padding-top: 100px;
+                        padding-bottom: 700px;
                         background-color: #ffffff;
 
                     }
